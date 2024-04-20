@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Perfect World Last</title>
+    
+  </head>
+
+  <body>
+    
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+    <!-- stats - count particles -->
+
+    <div id="principal">
+     <div class="main">
+         <h1>Manutenção Programada</h1>
+      <p>
+        Estamos realizando algumas atualizações para atendê-los melhor ❤️
+      </p>
+      <p id="timer"></p>
+     </div>
+    </div>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      function startCountdown() {
+        const endDate = new Date("2024-04-20T02:00:00"); // A data-alvo
+        const timerElement = document.getElementById("timer");
+
+        function updateCountdown() {
+          const now = new Date();
+          const difference = endDate - now;
+
+          if (difference <= 0) {
+            timerElement.textContent = "A manutenção terminou.";
+            return;
+          }
+
+          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (difference % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+          timerElement.textContent = `Retorno previsto em: ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        updateCountdown(); // Atualiza imediatamente
+        setInterval(updateCountdown, 1000); // Atualiza a cada segundo
+      }
+
+      document.addEventListener("DOMContentLoaded", startCountdown);
+    </script>
+  </body>
+</html>

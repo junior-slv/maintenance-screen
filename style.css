@@ -1,0 +1,82 @@
+/* ---- reset ---- */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+} /* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #252525;
+  background-image: url("https://media.discordapp.net/attachments/1076983281930731631/1214108476956217435/logo.png?ex=662f48a1&is=661cd3a1&hm=9b6c4c1a2bb807efe795e64f0ba1e3491b682f38c9030cde01867dbbecac4d08&=&format=webp&quality=lossless&width=1040&height=662");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 50%;
+} /* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #252525;
+  color: #fff;
+  font-family: Verdana, sans-serif;
+  height: 100vh; /* Certifica-se de que a altura seja 100% da tela */
+  overflow: hidden; /* Evita rolagem indesejada */
+}
+
+#principal {
+  position: absolute; /* Para posicionamento relativo à tela */
+  top: 50%; /* Posição central no eixo Y */
+  left: 50%; /* Posição central no eixo X */
+  transform: translate(-50%, -50%); /* Para centralizar o elemento */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Fundo preto opaco com 30% de transparência */
+  padding: 20px; /* Um pouco de espaço interno */
+  border-radius: 10px; /* Para bordas arredondadas, se desejar */
+  text-align: center; /* Centraliza o texto */
+}
+
+.main {
+  font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+.main {
+  text-align: center; /* Centraliza o texto dentro da div */
+}
